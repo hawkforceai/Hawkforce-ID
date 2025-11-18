@@ -34,6 +34,8 @@ jobs:
       - name: Build
         run: |
           npm run build
+          # Ensure GitHub Pages serves all files (no Jekyll processing)
+          touch dist/.nojekyll
           # SPA fallback for GitHub Pages
           cp dist/index.html dist/404.html
 
