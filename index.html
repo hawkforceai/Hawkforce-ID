@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://cdn.yellowmessenger.com/9NSCwAxFsrMD1762552569706.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hawkforce ID – Digital ID Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      @keyframes marquee {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        animation: marquee 30s linear infinite;
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { translateY(0px); }
+      }
+      .animate-float {
+        animation: float 5s ease-in-out infinite;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f5f5f5; /* Equivalent to --token-4f00a517-d75a-4557-9433-caf4536a911d */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .animated-section .animate-in {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(4px);
+        transition: opacity 0.6s ease-out, transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), filter 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        will-change: opacity, transform, filter;
+      }
+
+      .animated-section .animate-in.from-left {
+        transform: translateX(-40px);
+        filter: none;
+      }
+
+      .animated-section .animate-in.from-right {
+        transform: translateX(40px);
+        filter: none;
+      }
+      
+      .animated-section.is-visible .animate-in {
+        opacity: 1;
+        transform: translate(0, 0);
+        filter: blur(0);
+      }
+      
+      .card-tilt {
+        transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        will-change: transform, box-shadow;
+        position: relative;
+        overflow: hidden;
+      }
+      .card-tilt:hover {
+        transform: perspective(1200px) rotateX(4deg) rotateY(-6deg) scale3d(1.05, 1.05, 1.05);
+        box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.25);
+      }
+      .card-tilt::after {
+        content: '';
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        transform: translateX(-125%) skewX(-20deg);
+        background-image: linear-gradient(
+          100deg,
+          rgba(255, 255, 255, 0) 20%,
+          rgba(255, 255, 255, 0.1) 40%,
+          rgba(255, 255, 255, 0.1) 60%,
+          rgba(255, 255, 255, 0) 80%
+        );
+        transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+        pointer-events: none;
+      }
+      .card-tilt:hover::after {
+        transform: translateX(125%) skewX(-20deg);
+      }
+
+      /* Parallax specifically for the ID card */
+      .id-card-container .card-content,
+      .id-card-container .card-photo {
+          transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+      .id-card-container:hover .card-content {
+           transform: translateY(-4px);
+      }
+      .id-card-container:hover .card-photo {
+          transform: translateY(-8px) scale(1.03);
+      }
+
+      @keyframes rise {
+        from {
+          transform: translateY(0);
+          opacity: 0;
+        }
+        25% {
+          opacity: 0.5;
+        }
+        to {
+          transform: translateY(-400px);
+          opacity: 0;
+        }
+      }
+      .bubble {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation-name: rise;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.1);
+      }
+      
+      /* New keyframes for Benefits component */
+      @keyframes pulse-ring-1 {
+        0%, 100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.2; }
+        50% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+      }
+      @keyframes pulse-ring-2 {
+        0%, 100% { transform: translate(-50%, -50%) scale(0.75); opacity: 0.1; }
+        50% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.3; }
+      }
+      .pulse-ring-1 {
+        animation: pulse-ring-1 4s ease-in-out infinite;
+      }
+      .pulse-ring-2 {
+        animation: pulse-ring-2 4s ease-in-out infinite 0.5s;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+        .animate-marquee, .animate-float, .animate-bounce {
+          animation: none !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.run/@google/genai",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "next/": "https://aistudiocdn.com/next@^15.5.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
