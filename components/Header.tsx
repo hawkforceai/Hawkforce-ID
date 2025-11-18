@@ -43,7 +43,7 @@ const Header: React.FC<{ isScrolled: boolean; navigateTo: (page: string) => void
         <div className={`relative flex items-center justify-between h-20 px-6 transition-all duration-300 ${isScrolled ? 'h-16' : 'h-20'}`}>
           <div className="flex-shrink-0">
             <a href="#hero" onClick={(e) => handleNavigation(e, 'home')} className="flex items-center space-x-2.5">
-                <img src="https://cdn.yellowmessenger.com/9NSCwAxFsrMD1762552569706.png" alt="Hawkforce ID Logo" className="h-12 w-auto" />
+                <img src="https://cdn.yellowmessenger.com/OeHGBXvpGi7V1763488238850.jpeg" alt="Hawkforce ID Logo" className="h-12 w-auto" />
                 <span className="text-xl font-bold font-sans tracking-tighter">Hawkforce ID</span>
             </a>
           </div>

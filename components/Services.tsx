@@ -68,7 +68,7 @@ const Services: React.FC<{ navigateTo: (page: string) => void }> = ({ navigateTo
                                 </svg>
                               </div>
                               <div className="text-white">
-                                <img src="https://cdn.yellowmessenger.com/9NSCwAxFsrMD1762552569706.png" alt="Hawkforce ID Logo" className="h-8 w-auto" />
+                                <img src="https://cdn.yellowmessenger.com/OeHGBXvpGi7V1763488238850.jpeg" alt="Hawkforce ID Logo" className="h-8 w-auto" />
                               </div>
                             </div>
                           </div>

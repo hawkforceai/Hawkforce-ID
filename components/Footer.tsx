@@ -49,7 +49,7 @@ const Footer: React.FC<{ navigateTo: (target: string) => void; }> = ({ navigateT
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4 mb-6">
-           <img src="https://cdn.yellowmessenger.com/9NSCwAxFsrMD1762552569706.png" alt="Hawkforce ID Logo" className="h-12 w-auto" />
+           <img src="https://cdn.yellowmessenger.com/OeHGBXvpGi7V1763488238850.jpeg" alt="Hawkforce ID Logo" className="h-12 w-auto" />
                <h1 className="text-7xl font-sans font-bold tracking-tighter font-sans">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
                 Hawkforce ID
