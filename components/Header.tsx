@@ -17,7 +17,7 @@ const Header: React.FC<{ isScrolled: boolean; navigateTo: (page: string) => void
     setIsOpen(false);
     setSolutionsOpen(false);
   };
-  
+
   const solutionLinks = (
     <>
       <a
@@ -43,13 +43,13 @@ const Header: React.FC<{ isScrolled: boolean; navigateTo: (page: string) => void
         <div className={`relative flex items-center justify-between h-20 px-6 transition-all duration-300 ${isScrolled ? 'h-16' : 'h-20'}`}>
           <div className="flex-shrink-0">
             <a href="#hero" onClick={(e) => handleNavigation(e, 'home')} className="flex items-center space-x-2.5">
-                <img src="https://cdn.yellowmessenger.com/OeHGBXvpGi7V1763488238850.jpeg" alt="Hawkforce ID Logo" className="h-12 w-auto" />
-                <span className="text-xl font-bold font-sans tracking-tighter">Hawkforce ID</span>
+              <img src="https://img.notionusercontent.com/s3/prod-files-secure%2Ffb6f627f-280b-81f4-a66c-000345f01158%2F4f3b86e0-0d48-4443-ad80-233144e19c5a%2Fimage.png/size/w=1420?exp=1764418676&sig=lgB874KQBq1sm1tADp05yhH8rPo4usRJ0HyN4WchbMA&id=2baf627f-280b-80d9-be59-de89b85a56f7&table=block&userId=2bad872b-594c-8132-949d-000298a13532" alt="Hawkforce ID Logo" className="h-12 w-auto" />
+              <span className="text-xl font-bold font-sans tracking-tighter">Hawkforce ID</span>
             </a>
           </div>
           <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <nav className="flex items-baseline space-x-4">
-               <div className="relative py-2 -my-2" onMouseEnter={() => setSolutionsOpen(true)} onMouseLeave={() => setSolutionsOpen(false)}>
+              <div className="relative py-2 -my-2" onMouseEnter={() => setSolutionsOpen(true)} onMouseLeave={() => setSolutionsOpen(false)}>
                 <button
                   className="text-gray-700 hover:bg-gray-200/50 hover:text-gray-900 px-5 py-3 rounded-md text-base font-semibold transition-colors flex items-center gap-1"
                 >
@@ -74,9 +74,9 @@ const Header: React.FC<{ isScrolled: boolean; navigateTo: (page: string) => void
             </nav>
           </div>
           <div className="hidden lg:block">
-             <a href="#contact" onClick={(e) => handleNavigation(e, '#contact')} className="bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all shadow-md">
-                Get Started
-              </a>
+            <a href="#contact" onClick={(e) => handleNavigation(e, '#contact')} className="bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all shadow-md">
+              Get Started
+            </a>
           </div>
           <div className="-mr-2 flex lg:hidden">
             <button
